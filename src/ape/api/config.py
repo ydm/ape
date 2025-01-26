@@ -66,7 +66,7 @@ class PluginConfig(BaseSettings):
     a config API must register a subclass of this class.
     """
 
-    model_config = SettingsConfigDict(extra="allow")
+    model_config = SettingsConfigDict(extra="allow", env_prefix="APE_")
 
     @classmethod
     def from_overrides(
